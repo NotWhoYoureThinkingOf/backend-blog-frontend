@@ -25,6 +25,7 @@ export default function Home({ posts }) {
 
     const channel = pusher.subscribe("posts");
     channel.bind("inserted", (data) => {
+      console.log("pusher data", data);
       setAllPosts([data, ...allPosts]);
     });
 
@@ -36,7 +37,7 @@ export default function Home({ posts }) {
     };
   }, [allPosts]);
 
-  // console.log("allPosts", allPosts);
+  console.log("allPosts", allPosts);
 
   const submitPost = (e) => {
     e.preventDefault();
@@ -50,7 +51,7 @@ export default function Home({ posts }) {
 
   const deletePost = (e) => {
     e.preventDefault();
-    console.log("delete button pressed");
+    console.log(e.id);
   };
 
   return (
@@ -90,8 +91,8 @@ export default function Home({ posts }) {
       <div className={styles.posts}>
         <h2 className={styles.postsTitle}>Posts</h2>
         {allPosts.map((post) => (
-          <div className={styles.post}>
-            <div className={styles.delete} onClick={deletePost}>
+          <div className={styles.post} id={post._id ? post._id : post.id}>
+            <div className={styles.delete} onClick={(post) => deletePost(post)}>
               <Close />
             </div>
             <p>{post?.title}</p>
