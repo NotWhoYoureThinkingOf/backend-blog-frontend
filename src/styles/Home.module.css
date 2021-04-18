@@ -1,39 +1,77 @@
-.container {
-  text-align: center;
-}
-
-.logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.home{
+  display:flex;
+  flex-direction:column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
-.link {
-  color: rgb(112, 76, 182);
+.homeTitle{
+  margin-bottom:50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .logo {
-    animation: logo-float infinite 3s ease-in-out;
-  }
+.addPost{
+  width:50%;
 }
 
-@keyframes logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.addPost h2{
+  margin-bottom:20px;
+}
+
+.addTitle{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:20px;
+}
+
+.addTitle label{
+  margin-bottom:10px;
+}
+
+.addTitle input{
+  padding:10px;
+}
+
+.addDescription{
+  display:flex;
+  flex-direction:column;
+}
+
+.addDescription label{
+  margin-bottom:10px;
+}
+
+.addDescription textarea{
+  padding:10px;
+}
+
+.submitButton{
+  margin-top:15px;
+  padding:5px;
+}
+
+.posts {
+  width:50%;
+  margin-top:50px;
+}
+
+.postsTitle{
+  margin-bottom:20px
+}
+
+.post{
+  padding:15px;
+  margin:20px 0;
+  position:relative;
+  box-shadow:2px 2px 2px rgba(0,0,0,0.1)
+}
+
+.delete{
+  position:absolute;
+  top:5%;
+  right:1%;
+  cursor:pointer;
+}
+
+.postTitle{
+  text-decoration: underline;
+  margin-bottom:10px;
 }
