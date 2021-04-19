@@ -75,3 +75,53 @@
   text-decoration: underline;
   margin-bottom:10px;
 }
+
+.deleteWarning{
+  position: absolute;
+  background-color:rgb(255, 96, 96);
+  height:100%;
+  width:45%;
+  right:0;
+  top:50px;
+  padding:10px;
+  display:flex;
+  align-items: center;
+  color:white;
+  font-weight:300
+}
+
+.deleteWarning h4{
+  font-weight:300;
+  letter-spacing: 0px;
+}
+
+.deleteButtons{
+  display:flex;
+  gap:10px;
+}
+
+.deleteYes{
+  padding:5px 20px;
+  border:1px solid white;
+  border-radius:10px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  transition:all .1s ease;
+}
+
+.deleteNo{
+  padding:5px 20px;
+  border:1px solid white;
+  border-radius:10px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  transition:all .1s ease;
+}
+
+.deleteYes:hover, .deleteNo:hover{
+  background-color:white;
+  color:rgb(255, 96, 96);
+  cursor:pointer;
+}
